@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
@@ -213,6 +213,7 @@ html, body {
   min-height:100vh; display:none;
   flex-direction:column; align-items:center;
   position:relative; overflow:hidden;
+  z-index:1; background:var(--bg);
 }
 #stars-bg { position:fixed; inset:0; z-index:0; overflow:hidden; pointer-events:none; }
 .star {
@@ -953,6 +954,7 @@ async function showWelcomeSequence() {
 $('welcome-close-btn').addEventListener('click', () => {
   hideEl('welcome-popup');
   stopConfetti();
+  showDashboard();
 });
 
 // ===========================
@@ -1584,3 +1586,4 @@ window.addEventListener('resize',()=>{
 </script>
 </body>
 </html>
+
